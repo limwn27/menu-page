@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Giovanni's Pizza Payment</title>
+    <meta charset="utf-8">
+    <title>Payment</title>
+    <link href="payment.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg" id="logo" alt="Giovanni's Pizza" style="width:100%"/>
+    </header>
+    <section class="section-container">
+        <h2 class="section-header" style="font-size:100px">PAYMENT</h2>
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                    <form action="/action_page.php">
+
+                        <div class="row">
+                            <div class="col-50">
+                                <div class="cart-total">
+                                    <strong style="font-family:raleway;font-size:40px;text-align:left;">Total:</strong>
+                                    <span class="cart-total-price" style="font-size:40px;text-align:right">RM0</span>
+                                </div>
+                                <h1 style="text-align:center">Billing Address</h1>
+                                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="John Tan">
+                                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                <input type="text" id="email" name="email" placeholder="john@example.com">
+                                <label for="phonew"><i class="fa fa-envelope"></i>Phone Number</label>
+                                <input type="text" id="phone" name="phone" placeholder="012-3456789" />
+                                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                <input type="text" id="adr" name="address" placeholder="3/10,Jalan Setia Tropika">
+                                <label for="city"><i class="fa fa-institution"></i> City</label>
+                                <input type="text" id="city" name="city" placeholder="Johor Bahru">
+                                <label for="state">State</label>
+                                <input type="text" id="state" name="state" placeholder="Johor">
+                                <label for="zip">Zip</label>
+                                <input type="text" id="zip" name="zip" placeholder="81200">
+                                <h1 style="text-align:center">Top Up Offline Via ATM/Bank</h1>
+                                <h3 style="text-align:left">Bank Account</h3>
+                                <h4 style="border-style: outset; border-color: rgb(144,22,24);">
+                                    Company Name: Giovanni's Pizza<br />
+                                    Bank Name:Public Bank<br />
+                                    Account No.:5-0126434-17<br />
+                                </h4>
+                                <h4 style="border-style: outset; border-color: rgb(144,22,24); ">
+                                    Company Name: Giovanni's Pizza<br />
+                                    Bank Name:Agro Bank<br />
+                                    Account No.:2-00-6331-00015126-1<br />
+                                </h4>
+                                <h4 style="border-style: outset; border-color: rgb(144,22,24);">
+                                    Company Name: Giovanni's Pizza<br />
+                                    Bank Name:CIMB Bank<br />
+                                    Account No.:5641-2974-5613-55<br />
+                                </h4>
+                                <h4 style="border-style: outset; border-color: rgb(144,22,24);">
+                                    Company Name: Giovanni's Pizza<br />
+                                    Bank Name:Maybank<br />
+                                    Account No.:5140-1999-1854<br />
+                                </h4>
+
+                                <div class="bank">
+                                    <p>
+                                        <a href="https://www2.pbebank.com/myIBK/apppbb/servlet/BxxxServlet?RDOName=BxxxAuth&MethodName=login">
+                                            <img border="0" alt="publicbank" src="pbb.jpg" style="float:left;width:150px;height:130px">
+                                        </a>
+                                        <a href="https://www.agronet.com.my/rib/common/Login.do">
+                                            <img border="0" alt="agrobank" src="agrobank.jpg" style="float:left;width:150px;height:130px">
+                                        </a>
+                                        <a href="https://www.cimbclicks.com.my/clicks/#/">
+                                            <img border="0" alt="cimbbank" src="cimbbank.jpg" style="float:left;width:150px;height:130px">
+                                        </a>
+                                        <a href="https://www.maybank2u.com.my/home/m2u/common/login.do">
+                                            <img border="0" alt="maybank" src="maybank.jpg" style="float:left;width:150px;height:130px">
+                                        </a>
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h3>
+
+                                        <label for="ssPicPaymentBank" style="float:left">SCRIPT OF PAYMENT:</label>
+                                        <input type="file" name="paymentImage" accept="image/" required />
+
+                                    </h3>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="col-50">
+
+                            </div>
+                        </div>
+                        <label class="section-header" style="font-size:1.2em;color:black;">
+                            <input type="checkbox" checked="checked" name="sameadr"> Delivery address same as billing
+                        </label>
+
+                        <a href="invoice.html" class="btn">CONTINUE</a>
+
+
+                    </form>
+                    
+                </div>
+                <div class="card-footer">
+                    <div class="footer-copyright">&copy;2021 Copyright:<a href="#">Giovanni's Pizza</a></div>
+                </div>
+            </div>
+<script>
+    if (typeof(Storage) !== "undefined") {
+// Retrieve
+document.getElementsByClassName('cart-total-price').innerHTML = localStorage.getItem("cart-total-price", total);
+} else {
+document.getElementsByClassName('cart-total-price').innerHTML = "Browser does not support Web Storage.";
+}
+
+</script>
+
+        </div>
+    </section>
+</body>
+</html>
