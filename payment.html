@@ -113,9 +113,9 @@
 <script>
     if (typeof(Storage) !== "undefined") {
 // Retrieve
-document.getElementsByClassName('cart-total-price').innerHTML = localStorage.getItem("cart-total-price", total);
+document.getElementsByClassName('cart-total-price')[0].innerHTML = localStorage.getItem("cart-total-price");
 } else {
-document.getElementsByClassName('cart-total-price').innerHTML = "Browser does not support Web Storage.";
+document.getElementsByClassName('cart-total-price')[0].innerHTML = "Browser does not support Web Storage.";
 }
 
 </script>
